@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { data } from "../../constants";
+import { data, icon } from "../../constants";
 import { motion } from "framer-motion";
 
 const Slides = () => {
-  const [currentSlide, setCurrentSlide] = React.useState(0);
+  const [currentSlide, setCurrentSlide] = React.useState();
   const slideLength = data.slider.length;
   //   auto move
   const autoscroll = true;
@@ -21,7 +21,7 @@ const Slides = () => {
     setCurrentSlide(0);
   }, []);
   return (
-    <div className="flex flex-col mt-[40px] ">
+    <div className="flex flex-col mt-[40px] h-[80vh] ">
       {/* btns slide */}
       <div className="flex justify-between text-gray">
         <button className="uppercase m-1 hover:text-black" onClick={previus}>
@@ -33,7 +33,7 @@ const Slides = () => {
         </button>
       </div>
       {/* slider */}
-      <div className=" overflow-hidden relative w-[100%]  object-contain">
+      <div className=" overflow-hidden relative w-[100%]">
         {data.slider.map((item, index) => {
           return (
             <>
@@ -57,18 +57,22 @@ const Slides = () => {
                     <div className="flex justify-between">
                       <div className="mt-[50px]">
                         <h1 className=" uppercase  font-semibold">(Info) </h1>
-                        <div className="grid grid-cols-3 gap-8 mt-5">
+                        <div className="grid grid-cols-1  xl:grid-rows-3 w-screen xl:w-auto xl:grid-cols-3 uppercase gap-8 mt-5">
                           <p>{item.tem} </p>
                           <p> {item.city}</p>
                           <p>{item.text}</p>
                         </div>
                       </div>
-                      <div className="flex">
-                        <span className="m-10 uppercase text-gray font-semibold mt-[100px]">
+                      <div className="flex -mt-[15px]">
+                        <span className=" uppercase flex justify-between items-center text-gray font-semibold ">
+                          <span className="mr-2 text-black text-lg">
+                            {" "}
+                            <icon.MdPlayArrow />
+                          </span>
                           project /
                         </span>
-                        <span className="text-[7rem] flex font-bold ">
-                          0{currentSlide}
+                        <span className="text-[7rem]  flex font-bold ">
+                          0 <span className="text-[red]"> {currentSlide}</span>
                         </span>
                       </div>
                     </div>

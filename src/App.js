@@ -1,19 +1,23 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home } from "./pages";
-import { Navbar } from "./components";
+import { Home, Info, Portfolio, Works } from "./pages";
+import { AnimatePresence } from "framer-motion";
 const App = () => {
   return (
-    <div className="p-[1rem] font-body">
-      <Router>
-      <Navbar />
-        <Routes>
-          <Route path="/">
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </Router>
-    </div>
+    <AnimatePresence exitBeforeEnter>
+      <div className=" font-body">
+        <Router>
+          <Routes>
+            <Route path="/">
+              <Route index element={<Home />} />
+              <Route path="link" element={<Portfolio />} />
+              <Route path="info" element={<Info />} />
+              <Route path="works" element={<Works />} />
+            </Route>
+          </Routes>
+        </Router>
+      </div>
+    </AnimatePresence>
   );
 };
 

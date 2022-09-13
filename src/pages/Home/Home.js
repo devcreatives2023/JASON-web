@@ -1,11 +1,20 @@
 import React from "react";
-import { Slides } from "../../components";
-
+import { Navbar, Slides } from "../../components";
+import { motion } from "framer-motion";
 const Home = () => {
   return (
-    <div className="h-[70vh]">
-      <Slides />
-    </div>
+    <>
+      <Navbar />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        exit={{ opacity: 1 }}
+        className="p-[1rem]"
+      >
+        <Slides />
+      </motion.div>
+    </>
   );
 };
 
