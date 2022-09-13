@@ -60,38 +60,61 @@ const Works = ({ children, baseVelocity = 40 }) => {
   return (
     <>
       <div>
-        <Navbar text="index" link="/works" text2=" / Gallery" link2="/gallery" bg="black" />
+        <Navbar
+          text="index"
+          link="/works"
+          text2=" / Gallery"
+          link2="/gallery"
+          bg="black"
+        />
       </div>
 
-      <div className="flex flex-col mt-0 xl:mt-10 lg:mt-10 p-[1rem] cursor-pointer">
+      <div className="flex flex-col mt-10 xl:mt-10 lg:mt-10 xl:p-[1rem] cursor-pointer">
         {data.works.map((item, index) => {
           return (
-            <div key={index} className="mt-10 border-b-2 pb-10 pt-4 px-4">
-              <p className=" uppercase text-sm"> {item.span}</p>
-              <p className="xl:text-2xl w-[90%] mt-0 xl:-mt-[50px] ml-0 xl:-ml-[10px] font-bold uppercase">
+            <div key={index} className="xl:mt-10 border-b-2 pb-10 pt-4 px-4">
+              <p className=" uppercase text-sm xl:text-lg"> {item.span}</p>
+              <motion.p
+                initial={{ y: -50, opacity: 0 }}
+                animate={{ y: 10, opacity: 1 }}
+                exit={{ y: -40}}
+                transition={{type: "spring" }}
+                className="xl:text-2xl mt-3 ml-0 xl:-ml-[15px] leading-[80%] m-[20px] xl:mb-[50px] 
+              font-bold uppercase"
+              >
                 {item.name}
-              </p>
+              </motion.p>
 
-              <div className="grid grid-cols-2 uppercase  text-[10px]">
+              <div className="grid grid-cols-2 uppercase  text-[10px] xl:text-sm lg:text-lg md:text:sm">
                 <div className="flex flex-col xl:flex-row justify-between">
                   <p className="flex  flex-col">
-                    <span className="hidden xl:visible lg:visible md:visible"> (clients)</span>
-                     <span>{item.clients} </span>
+                    <span className="hidden xl:inline-block lg:inline-block md:inline-block">
+                      (clients)
+                    </span>
+                    <span>{item.clients} </span>
                   </p>
                   <p className="flex flex-col  ">
-                    <span className="hidden xl:visible lg:visible md:visible">(Location)</span>
+                    <span className="hidden xl:inline-block lg:inline-block md:inline-block">
+                      (Location)
+                    </span>
                     <span>{item.location}</span>
                   </p>
                   <p className="flex flex-col  ">
-                    <span className="hidden xl:visible lg:visible md:visible">(gps)</span>
+                    <span className="hidden xl:inline-block lg:inline-block md:inline-block">
+                      (gps)
+                    </span>
                     <span>{item.gps}</span>
                   </p>
                   <p className="flex flex-col  ">
-                    <span className="hidden xl:visible lg:visible md:visible">(year)</span>
+                    <span className="hidden xl:inline-block lg:inline-block md:inline-block">
+                      (year)
+                    </span>
                     <span>{item.year}</span>
                   </p>
                   <p className="flex flex-col  ">
-                    <span className="hidden xl:visible lg:visible md:visible">(publication)</span>
+                    <span className="hidden xl:inline-block lg:inline-block md:inline-block">
+                      (publication)
+                    </span>
                     <span className="text-3">{item.publication}</span>
                   </p>
                 </div>
@@ -106,7 +129,7 @@ const Works = ({ children, baseVelocity = 40 }) => {
                       className="flex px-1"
                       // style={{ x }}
                       transition={{ repeat: Infinity }}
-                    > 
+                    >
                       <motion.img
                         src={item.img1}
                         className="w-[250px]

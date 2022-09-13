@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home, Info, Portfolio, Works } from "./pages";
+import { Gallery, Home, Info, Portfolio, Works } from "./pages";
 import { AnimatePresence } from "framer-motion";
 const App = () => {
   const[count, setCount] = useState(1);
@@ -15,6 +15,7 @@ const App = () => {
               <Route path="link" element={<Portfolio />} />
               <Route path="info" element={<Info />} />
               <Route path="works" element={<Works />} />
+              <Route path="gallery" element={<Gallery />} />
             </Route>
           </Routes>
         </Router>
