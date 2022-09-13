@@ -36,8 +36,8 @@ const Info = () => {
           exit={{ x: 100 }}
         >
           <div className="grid grid-cols-2 gap-6">
-            <div className="flex flex-col leading-7 uppercase tracking-wider items-start">
-              <h1 className="ml-2 font-semibold mb-2">(Clients)</h1>
+            <div className="flex flex-col xl:leading-7 uppercase tracking-wider items-start">
+              <h1 className="xl:ml-2 font-semibold mb-2">(Clients)</h1>
               <p className="text-[12px]">DILLER SCOFIDIO + RENFRO OMA</p>
               <p className="text-[12px]">
                 pellt clarkee architects <br /> obermoser architects
@@ -46,8 +46,8 @@ const Info = () => {
                 + EXPAND{" "}
               </span>
             </div>
-            <div className="flex flex-col leading-7 uppercase  items-start">
-              <h1 className="ml-2 font-semibold mb-2">(publication)</h1>
+            <div className="flex flex-col xl:leading-7 uppercase  items-start">
+              <h1 className="xl:ml-2 font-semibold mb-2">(publication)</h1>
               <p className="text-[12px]">DILLER SCOFIDIO + RENFRO OMA</p>
               <p className="text-[12px]">
                 pellt clarkee architects <br /> obermoser architects
@@ -85,11 +85,11 @@ const Info = () => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ x: 100 }}
         >
-          <div className=" px-0 xl:px-5 flex flex-col ">
-            <h1 className="xl:mr-auto ml-2 font-semibold mb-2 uppercase ">
+          <div className="  xl:px-5 flex flex-col mt-1">
+            <h1 className="xl:mr-auto xl:ml-2 font-semibold mb-2 uppercase ">
               ( Biography )
             </h1>
-            <p>
+            <p className="font-semibold">
               Known for his keen eye and rigor, Jason spends time with clients
               from the outset, absorbing their vision and using it to fuel his
               creativity behind the lens. Every shot is meticulously curated to

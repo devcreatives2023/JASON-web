@@ -16,7 +16,7 @@ const Slides = () => {
   }, []);
 
   return (
-    <div className="flex flex-col mt-[40px] h-[90vh] xl:h-[80vh] ">
+    <div className="flex flex-col mt-[40px] h-[80vh] xl:h-[80vh] ">
       {/* btns slide */}
       <div className="flex justify-between text-gray">
         <button className="uppercase m-1 hover:text-black" onClick={previus}>
