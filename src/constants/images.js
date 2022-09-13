@@ -11,8 +11,12 @@ import b5 from "./images/b5.jpg";
 import b6 from "./images/b6.jpg";
 import b7 from "./images/b7.jpg";
 
-
+// header
+import h1 from "./images/h1.jpg";
+import h2 from "./images/h2.jpg";
 export default {
+  h1,
+  h2,
   s1,
   s2,
   s3,
@@ -23,5 +27,5 @@ export default {
   b4,
   b5,
   b6,
-  b7
+  b7,
 };

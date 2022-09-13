@@ -2,13 +2,13 @@ import { images } from "../constants";
 const data = {
   slider: [
     {
-      img: images.s1,
+      img: images.h2,
       tem: "37 , 47' 22.1N  122 23' 49.0 w",
       city: "japan, us-19",
       text: "SALESFORCE",
     },
     {
-      img: images.s2,
+      img: images.b4,
       tem: "37 , 47' 22.1N  122 23' 49.0 w",
       city: "hoisted , us-19",
       text: "SALESFORCE",
