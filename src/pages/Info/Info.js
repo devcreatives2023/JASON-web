@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from "../../components";
-import { images } from "../../constants";
+import { images,icon } from "../../constants";
 import { motion } from "framer-motion";
 const Info = () => {
   const data = [
@@ -17,7 +17,7 @@ const Info = () => {
   return (
     <>
       <div>
-        <Navbar />
+        <Navbar text={<icon.AiOutlinePlus /> } link="/" bg="black" />
       </div>
 
       <motion.div
@@ -62,14 +62,7 @@ const Info = () => {
             <img src={images.info} className="w-90" />
             <p
               className="absolute text-[black]  
-              uppercase font-bold
-             -right-10   xl:-right-[19rem] lg:-right-[19rem] 
-                 tracking-wide z-10  scale-[-1] text-[5rem] 
-                 xl:text-[16rem] lg:text-[16rem]   md:text-[12rem]
-                 top-10 
-                 xl:top-[0px] lg:top-0  
-              md:top-[130px]
-               rotate-[90deg]"
+              uppercase font-bold -right-10  xl:-right-[19rem] lg:-right-[19rem] tracking-wide z-10  scale-[-1] text-[5rem]  xl:text-[16rem] lg:text-[16rem]  md:text-[12rem] top-10  xl:top-[0px] lg:top-0  md:top-[130px] rotate-[90deg]"
             >
               Info
             </p>

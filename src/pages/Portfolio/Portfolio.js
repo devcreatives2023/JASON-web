@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { LinksNavbar } from "../../components";
+import { Navbar } from "../../components";
+import { icon } from "../../constants";
 const Portfolio = () => {
   return (
     <motion.div
@@ -11,20 +12,21 @@ const Portfolio = () => {
       variants={{ Infinity }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <LinksNavbar />
+      <Navbar text={<icon.AiOutlinePlus /> } link="/" bg="white" />
       <div className="font-bold uppercase text-[white] flex justify-center items-start">
         <div className=" rotate-[270deg] s] mt-[130px] xl:mt-0
          lg:mt-[100px] sm:mt-0 md:mt-[400px]">
           {/* info start */}
           <div className="flex items-start">
-            <div className=" border-b-2 xl:w-[530px] w-[270px]  border-l flex-col  border-[#eee] ">
+            <motion.div 
+            className=" border-b-2 xl:w-[530px] w-[270px]  border-l flex-col  border-[#eee] ">
               <Link className=" hover:text-[red] text-left " to="/info">
                 <h1 className="lg:text-[7rem] md:text-[5rem] text-[2rem] xl:text-[9rem]">
                   info
                 </h1>
                 <p className="uppercase pl-3 ">perosanl Info </p>
               </Link>
-            </div>
+            </motion.div>
           </div>
           {/* info end */}
 

@@ -7,12 +7,12 @@ module.exports = {
       height: {},
       screens: {},
       colors: { gray: "gray" },
-      fontFamily: {
-        // body:"'Barlow', sans-serif ",
-      },
       fontSize: {
         xl: "2.5rem",
+        "2xl": "10rem",
+        sm: "12px",
       },
+
       screens: {
         xsm: "445px",
         sm: "665px",

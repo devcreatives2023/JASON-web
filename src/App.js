@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home, Info, Portfolio, Works } from "./pages";
-import { AnimatePresence,motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 const App = () => {
   const[count, setCount] = useState(1);
 
   return (
     <AnimatePresence exitBeforeEnter>
-      <div className=" font-body">
+      <div className="">
         <Router>
           <Routes>
             <Route path="/">
