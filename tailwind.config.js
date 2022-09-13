@@ -13,6 +13,14 @@ module.exports = {
       fontSize: {
         xl: "2.5rem",
       },
+      screens: {
+        xsm: "445px",
+        sm: "665px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
     },
   },
   plugins: [],
