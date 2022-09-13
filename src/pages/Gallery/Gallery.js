@@ -14,35 +14,37 @@ const Gallery = () => {
         />
       </div>
 
-      <div className="p-[1rem] mt-[80px]">
-        <ul className="grid  grid-cols-5  grid-rows-4 gap-4">
+      <div className="p-[1rem] mt-[60px] xl:mt-[80px]">
+        <ul className="grid  grid-cols-5  grid-rows-4 gap-1 xl:gap-4">
        {/* fisrt row */}
           <li className="row-span-4 g-[red]  row-end-1 ">
-            <img src={images.b1}  className='row-span-4 h-[475px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> 
+            <img src={images.b1}  className='row-span-4 xl:h-[475px] lg:h-[470px]  h-[255px]  object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> 
+        <p className=""></p>
+        
         </li>
           <li className=" row-span-2">
-            <img  src={images.b2}  className='h-[230px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0 ' /> 
+            <img  src={images.b2}  className='xl:h-[230px] lg:h-[230px] h-[120px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0 ' /> 
         </li>
           <li className="row-span-4">
-        <img  src={images.b3}  className='h-[470px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> 
+        <img  src={images.b3}  className='xl:h-[470px] lg:h-[470px]  h-[255px]  object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> 
         </li>
           <li className=" row-span-2">
-        <img  src={images.b4}  className='h-[250px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' />
+        <img  src={images.b4}  className='xl:h-[250px] lg:h-[250px] h-[130px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' />
         </li>
           <li className=" row-span-2">
-        <img  src={images.b5}  className='h-[220px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' />
+        <img  src={images.b5}  className='xl:h-[220px] lg:h-[220px] h-[120px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' />
         </li>
 
           {/* second row */}          
-          <li className=" row-span-2 "><img  src={images.b6}  className='h-[200px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> </li>
-          <li className=" row-span-4  "><img  src={images.b7}  className='h-[470px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> </li>
-          <li className=" row-span-2 "><img  src={images.b1}  className='h-[200px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> </li>
-          <li className=" row-span-4 "><img  src={images.b6}  className='h-[470px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> </li>
-          <li className=" row-span-4 "><img  src={images.b3}  className='h-[470px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> </li>
-          <li className=" row-span-2 "><img  src={images.b2}  className='h-[200px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> </li>
-          <li className=" row-span-4 "><img  src={images.s1}  className='h-[470px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> </li>
-          <li className=" row-span-2 "><img  src={images.s3}  className='h-[200px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> </li>
-          <li className="row-span-2 "><img   src={images.s2} className='h-[200px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> </li>
+          <li className=" row-span-2 "><img  src={images.b6}  className='xl:h-[200px] lg:h-[200px] h-[120px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> </li>
+          <li className=" row-span-4  "><img  src={images.b7}  className='xl:h-[470px] lg:h-[470px] h-[250px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> </li>
+          <li className=" row-span-2 "><img  src={images.b1}  className='xl:h-[200px] lg:h-[200px] h-[118px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> </li>
+          <li className=" row-span-4 "><img  src={images.b6}  className='xl:h-[470px] lg:h-[470px] h-[250px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> </li>
+          <li className=" row-span-4 "><img  src={images.b3}  className='xl:h-[470px] lg:h-[470px] h-[250px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> </li>
+          <li className=" row-span-2 "><img  src={images.b2}  className='xl:h-[200px] lg:h-[200px] h-[125px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> </li>
+          <li className=" row-span-4 "><img  src={images.s1}  className='xl:h-[470px] lg:h-[470px]  h-[250px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> </li>
+          <li className=" row-span-2 "><img  src={images.s3}  className='xl:h-[200px] lg:h-[200px]  h-[120px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> </li>
+          <li className="row-span-2 "><img   src={images.s2} className='xl:h-[200px] lg:h-[200px]  h-[120px] object-cover  transition-all duration-[0.5s] cursor-pointer grayscale-[100%] hover:grayscale-0' /> </li>
         </ul>
       </div>
     </div>
