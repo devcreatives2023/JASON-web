@@ -14,7 +14,7 @@ const LinksNavbar = () => {
         <icon.AiOutlinePlus />
       </div>
       <div className="flex flex-col cursor-pointer">
-        <span className=" transition-all duration-[0.4s] ease-in-out  hover:text-[red] text-[60px]">
+        <span className=" transition-all duration-[0.4s] ease-in-out  hover:text-[red] text-[2rem] xl:text-[60px] lg:text-[4rem] md:text-[4rem]">
           <Link to="/link">
             <icon.CgIfDesign />
           </Link>
