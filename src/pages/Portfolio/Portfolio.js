@@ -14,7 +14,7 @@ const Portfolio = () => {
     >
       <Navbar text={<icon.AiOutlinePlus /> } link="/" bg="white" />
       <div className="font-bold uppercase text-[white] flex justify-center items-start">
-        <div className=" rotate-[270deg] s] mt-[130px] xl:mt-0
+        <div className=" rotate-[270deg]  mt-[130px] xl:mt-0
          lg:mt-[100px] sm:mt-0 md:mt-[400px]">
           {/* info start */}
           <div className="flex items-start">
@@ -36,7 +36,7 @@ const Portfolio = () => {
            border-b-2 border-[#eee]"
           >
             <Link to="/works">
-              <h1 className="lg:text-[7rem] text-[2rem] md:text-[5rem] xl:text-[9rem]">
+              <h1 className="lg:text-[7rem] text-[3rem] md:text-[5rem] xl:text-[9rem]">
                 works
               </h1>
               <p className="uppercase text-right">perosanl Info </p>

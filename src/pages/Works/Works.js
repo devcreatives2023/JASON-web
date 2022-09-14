@@ -1,62 +1,15 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Navbar } from "../../components";
 import { data } from "../../constants";
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  useMotionValue,
-  useVelocity,
-  useAnimationFrame,
-} from "framer-motion";
-import { wrap } from "@motionone/utils";
+import { motion } from "framer-motion";
 
-// motion for add div which will get the animation or transition
-// useScroll select the method which transition will work and also we use ScrollY and scrollY
-// to select transition with any direction (x or y)
-//useVelocity decide the velocity of update
-// useTrasnform to create chain of motion values and us ewith useMotionvalue()
-// useAnimationFrame to do animation with one render and complete animation with callback function
-
-const Works = ({ children, baseVelocity = 40 }) => {
-  // initial value
-  const basex = useMotionValue(0);
-  // direction of scroll
-  const { scrollY } = useScroll();
-  // velocitt of animation with scroll
-  const scrollVelocity = useVelocity(scrollY);
-  // type of animation with useSpring ==>(add smaooth move )
-  const smoothVelocity = useSpring(scrollVelocity, {
-    damping: 50,
-    stiffness: 600,
-  });
-
-  // range of
-  const velocityFactore = useTransform(smoothVelocity, [1, 1000], [0, 5], {
-    clamp: false,
-  });
-  const x = useTransform(basex, (v) => `${wrap(-20, -45, v)}%`);
-  // number less or greate tha 1
-  const directionFactore = useRef(1);
-  const prevT = useRef(0);
-  useAnimationFrame((t) => {
-    if (!prevT.current) {
-      prevT.current = t;
-    }
-    const timeDelate = t - prevT.current;
-    let moveBy = directionFactore.current * baseVelocity * (timeDelate / 5000);
-
-    if (velocityFactore.get() < 0) {
-      directionFactore.current = -1;
-    } else if (velocityFactore.get() > 0) {
-      directionFactore.current = 1;
-    }
-    moveBy += directionFactore.current * moveBy * velocityFactore.get();
-    basex.set(basex.get() + moveBy);
-    prevT.current = t;
-  });
-
+const Works = () => {
+  // motion for add div which will get the animation or transition
+  // useScroll select the method which transition will work and also we use ScrollY and scrollY
+  // to select transition with any direction (x or y)
+  //useVelocity decide the velocity of update
+  // useTrasnform to create chain of motion values and us ewith useMotionvalue()
+  // useAnimationFrame to do animation with one render and complete animation with callback function
   return (
     <>
       <div>
@@ -77,8 +30,8 @@ const Works = ({ children, baseVelocity = 40 }) => {
               <motion.p
                 initial={{ y: -50, opacity: 0 }}
                 animate={{ y: 10, opacity: 1 }}
-                exit={{ y: -40}}
-                transition={{type: "spring" }}
+                exit={{ y: -40 }}
+                transition={{ type: "spring" }}
                 className="xl:text-2xl mt-3 ml-0 xl:-ml-[15px] leading-[80%] m-[20px] xl:mb-[50px] 
               font-bold uppercase"
               >
