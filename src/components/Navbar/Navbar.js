@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { icon } from "../../constants";
-const Navbar = ({ text, link, text2, link2 ,bg }) => {
+const Navbar = ({ text, link, text2, link2, bg }) => {
   const btn = React.useRef();
   return (
     <motion.div
@@ -11,7 +11,7 @@ const Navbar = ({ text, link, text2, link2 ,bg }) => {
       animate={{ y: 15 }}
       transition={{ duration: 1, ease: "easeIn", type: "spring" }}
       exit={{ y: 0 }}
-      style={ {color: bg}}
+      style={{ color: bg }}
     >
       <div className=" hover:text-[red] transition ease-in-out duration-[0.3s] font-semibold text-sm xl:text-lg lg:text-lg md:text-lg ">
         <Link to="/">
@@ -21,14 +21,22 @@ const Navbar = ({ text, link, text2, link2 ,bg }) => {
       <div className=" text-[10px] xl:text-[16px] lg:text-[12px] md:text-[12px]">
         {/* <icon.AiOutlinePlus /> */}
         <Link to={link}> {text} </Link>
-        {text2 && link2 ? <Link to={link2}  className='text-[gray] hover:text-black'>{text2} </Link> : null}
+        {text2 && link2 ? (
+          <Link to={link2} className="text-[gray] hover:text-black">
+            {text2}{" "}
+          </Link>
+        ) : null}
       </div>
       <div className="flex flex-col cursor-pointer">
-        <span className=" transition-all duration-[0.4s] ease-in-out  hover:text-[red] text-[2rem] xl:text-[60px] lg:text-[4rem] md:text-[4rem] ">
+        <motion.span
+        whileHover={{
+          scale: 1.1
+        }}
+        className=" transition-all duration-[0.4s] ease-in-out  hover:text-[red] text-[2rem] xl:text-[60px] lg:text-[4rem] md:text-[4rem] ">
           <Link to="/link">
             <icon.CgIfDesign />
           </Link>
-        </span>
+        </motion.span>
       </div>
     </motion.div>
   );
