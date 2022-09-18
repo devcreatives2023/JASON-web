@@ -1,7 +1,10 @@
-import { motion } from "framer-motion";
 import React from "react";
+
+import { motion } from "framer-motion";
 import { Navbar } from "../../components";
 import { images } from "../../constants";
+
+
 const Gallery = () => {
   return (
     <motion.div>
