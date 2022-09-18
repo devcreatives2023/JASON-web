@@ -12,14 +12,15 @@ const Portfolio = () => {
       variants={{ Infinity }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <Navbar text={<icon.AiOutlinePlus /> } link="/" bg="white" />
+      <Navbar text={<icon.AiOutlinePlus />} link="/" bg="white" />
       <div className="font-bold uppercase text-[white] flex justify-center items-start">
-        <div className=" rotate-[270deg]  mt-[130px] xl:mt-0
-         lg:mt-[100px] sm:mt-0 md:mt-[400px]">
+        <div
+          className=" rotate-[270deg]  mt-[130px] xl:mt-0
+         lg:mt-[100px] sm:mt-0 md:mt-[400px]"
+        >
           {/* info start */}
           <div className="flex items-start">
-            <motion.div 
-            className=" border-b-2 xl:w-[530px] w-[270px]  border-l flex-col  border-[#eee] ">
+            <motion.div className=" border-b-2 xl:w-[530px] w-[270px]  border-l flex-col  border-[#eee] ">
               <Link className=" hover:text-[red] text-left " to="/info">
                 <h1 className="lg:text-[7rem] md:text-[5rem] text-[2rem] xl:text-[9rem]">
                   info
@@ -54,7 +55,6 @@ const Portfolio = () => {
             </div>
           </div>
           {/* start end */}
-
         </div>
       </div>
     </motion.div>
